@@ -18,8 +18,8 @@ test("snapshots work", async () => {
 
   const testEl = screen.getByText(/Hello/i)
   expect(testEl).toMatchInlineSnapshot(`
-    <div>
+    <h1>
       Hello, World!
-    </div>
+    </h1>
   `)
 })

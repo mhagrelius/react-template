@@ -1,3 +1,4 @@
+import { composeWith } from "ramda"
 const Right = (x) => ({
   chain: (f) => f(x), // flattens while it maps
   map: (f) => Right(f(x)),
@@ -20,8 +21,8 @@ const tryCatch = (f) => {
   }
 }
 
-export default {
-  tryCatch,
-  Right,
-  Left,
+function composeP(...fns) {
+  return composeWith(async (nextFn, lastFn) => nextFn(await lastFn))(fns)
 }
+
+export { composeP, tryCatch, Right, Left }

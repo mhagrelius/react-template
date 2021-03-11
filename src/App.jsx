@@ -1,11 +1,26 @@
 import React from "react"
-import { ThemeProvider } from "styled-components"
-import theme from "./theme"
-import "./style.css"
-import { BrowserRouter } from "react-router-dom"
+import { createGlobalStyle } from "styled-components"
+import reset from "styled-reset"
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+`
 
 function App() {
-  return "Hello, World!"
+  return (
+    <>
+      <GlobalStyle />
+      <h1>Hello, World!</h1>
+    </>
+  )
 }
 
 export default App

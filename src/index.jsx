@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 
 import App from "./App"
@@ -10,9 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <Switch>
-          <Route exact path="/" component={App} />
-        </Switch>
+        <App />
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,

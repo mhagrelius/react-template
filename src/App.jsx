@@ -1,6 +1,9 @@
 import React from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"
+
+import { Home } from "./pages/Home"
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -18,7 +21,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <h1>Hello, World!</h1>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   )
 }

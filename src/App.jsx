@@ -1,4 +1,3 @@
-import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { createGlobalStyle } from "styled-components"
 import reset from "styled-reset"

@@ -17,6 +17,8 @@ module.exports = {
   devOptions: {
     port: 3000,
   },
-  buildOptions: {},
+  buildOptions: {
+    jsxInject: "import React from 'react'",
+  },
   exclude: ["**/node_modules/**/*", "**/mocks/**/*", "*.test.*", "*.stories*"],
 }

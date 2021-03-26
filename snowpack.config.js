@@ -4,15 +4,13 @@ module.exports = {
     public: { url: "/", static: true },
     src: "/dist",
   },
-  plugins: ["@snowpack/plugin-react-refresh", "@snowpack/plugin-dotenv", "snowpack-plugin-svgr"],
+  plugins: [
+    "@snowpack/plugin-react-refresh",
+    "@snowpack/plugin-dotenv",
+    "snowpack-plugin-svgr",
+    ["@snowpack/plugin-webpack"],
+  ],
   routes: [],
-  optimize: {
-    bundle: true,
-    minify: true,
-    treeshake: true,
-    splitting: true,
-    target: "es2020",
-  },
   packageOptions: {},
   devOptions: {
     port: 3000,

@@ -17,12 +17,11 @@ ReactDOM.render(
 if (import.meta.hot) {
   import.meta.hot.accept()
 }
-
-async function startMockServiceWorker() {
-  if (import.meta.env.MODE === "development") {
+if (import.meta.env.MODE === "development") {
+  const startMockServiceWorker = async () => {
     const { worker } = await import("./mocks/browser")
     worker.start()
   }
-}
 
-startMockServiceWorker()
+  startMockServiceWorker()
+}

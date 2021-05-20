@@ -15,7 +15,7 @@ module.exports = {
     "plugin:promise/recommended",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "plugin:testing-library/recommended",
+    "plugin:testing-library/dom",
     "plugin:testing-library/react",
     "plugin:prettier/recommended", // Should always be last
   ],

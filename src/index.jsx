@@ -20,7 +20,7 @@ if (import.meta.hot) {
 if (import.meta.env.MODE === "development") {
   const startMockServiceWorker = async () => {
     const { worker } = await import("./mocks/browser")
-    worker.start()
+    await worker.start()
   }
 
   startMockServiceWorker()
